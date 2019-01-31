@@ -5,79 +5,292 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
-
-    <!-- Optional theme -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Javascript -->
+    <!-- <script src="./survey.js"></script> -->
 
     <title>Survey</title>
   </head>
   <body>
     <!-- ------------------------------------------------------------------------ -->
+    <div class="container">
     <!-- jumbotron -->
     <div class="jumbotron jumbotron-fluid" align="center">
       <div class="container">
-        <h1 class="display-4">THE SURVEY HAS BEGUN</h1>
-        <p class="lead">Complete the survey to find your friends.</p>
+        <h1 class="display-4" id="jumbotronContent1">THE SURVEY HAS BEGUN</h1>
+        <p class="lead" id="jumbotronContent2">
+          Rate the following questions to find your friends.
+        </p>
       </div>
     </div>
     <!-- ------------------------------------------------------------------------ -->
-    <!-- Form -->
-    <div class="form-check">
-      <input
-        class="form-check-input"
-        type="radio"
-        name="exampleRadios"
-        id="exampleRadios1"
-        value="option1"
-        checked
-      />
-      <label class="form-check-label" for="exampleRadios1">
-        Default radio
-      </label>
-    </div>
-    <div class="form-check">
-      <input
-        class="form-check-input"
-        type="radio"
-        name="exampleRadios"
-        id="exampleRadios2"
-        value="option2"
-      />
-      <label class="form-check-label" for="exampleRadios2">
-        Second default radio
-      </label>
-    </div>
-    <div class="form-check disabled">
-      <input
-        class="form-check-input"
-        type="radio"
-        name="exampleRadios"
-        id="exampleRadios3"
-        value="option3"
-        disabled
-      />
-      <label class="form-check-label" for="exampleRadios3">
-        Disabled radio
-      </label>
-    </div>
+    <!-- form -->
+    <form>
+      <div class = "form-group" id="name">
+        <label for="exampleFormControlInput1"><h4>Name</h4></label>
+        <input type="text" class="form-control" id="form-name" placeholder="" />
+      </div>
+      <!-- ------------------------------------------------------------------------ -->
+      <div class = "form-group" id="photo">
+          <label for="exampleFormControlInput1"><h4>Link to photo (required)</h4></label>
+          <input type="link" class="form-control" id="form-name" placeholder="" />
+        </div>
+        <!-- ------------------------------------------------------------------------ -->
+  
+      <div class="form-group" id="formQuestion1">
+        <h1>Question 1</h1>
+        <label for="dropdown1"><h4>Your mind is always buzzing with unexplored ideas and plans.</h4></label>
+        <select class="form-control">
+          <div class="rating">
+          <option value="" selected disabled>Choose</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        <!-- ---------------------------------------------- -->
+        <div class="form-group" id="formQuestion2">
+            <h1>Question 2</h1>
+            <label for="dropdown2"><h4>Generally speaking, you rely more on your experience than your imagination.</h4></label>
+            <select class="form-control">
+              <div class="rating">
+              <option value="" selected disabled>Choose</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+        <!-- ---------------------------------------------- -->
+        <div class="form-group" id="formQuestion3">
+            <h1>Question 3</h1>
+            <label for="dropdown3"><h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4></label>
+            <select class="form-control">
+              <div class="rating">
+              <option value="" selected disabled>Choose</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+        <!-- ---------------------------------------------- -->
+        <div class="form-group" id="formQuestion4">
+            <h1>Question 4</h1>
+            <label for="dropdown4"><h4>You rarely do something just out of sheer curiosity.</h4></label>
+            <select class="form-control">
+              <div class="rating">
+              <option value="" selected disabled>Choose</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+    <!-- ------------------------------------------------------------------------ -->
+    <div class="form-group" id="formQuestion5">
+        <h1>Question 5</h1>
+        <label for="dropdown5"><h4>People can rarely upset you.</h4></label>
+        <select class="form-control">
+          <div class="rating">
+          <option value="" selected disabled>Choose</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+<!-- ------------------------------------------------------------------------ -->
+<div class="form-group" id="formQuestion6">
+    <h1>Question 6</h1>
+    <label for="dropdown6"><h4>It is often difficult for you to relate to other people’s feelings.</h4></label>
+    <select class="form-control">
+      <div class="rating">
+      <option value="" selected disabled>Choose</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+<!-- ------------------------------------------------------------------------ -->
+<div class="form-group" id="formQuestion7">
+    <h1>Question 7</h1>
+    <label for="dropdown7"><h4>In a discussion, truth should be more important than people’s sensitivities.</h4></label>
+    <select class="form-control">
+      <div class="rating">
+      <option value="" selected disabled>Choose</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+<!-- ------------------------------------------------------------------------ -->
+<div class="form-group" id="formQuestion8">
+    <h1>Question 8</h1>
+    <label for="dropdown8"><h4>You rarely get carried away by fantasies and ideas.</h4></label>
+    <select class="form-control">
+      <div class="rating">
+      <option value="" selected disabled>Choose</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+<!-- ------------------------------------------------------------------------ -->
+<div class="form-group" id="formQuestion9">
+    <h1>Question 9</h1>
+    <label for="dropdown9"><h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4></label>
+    <select class="form-control">
+      <div class="rating">
+      <option value="" selected disabled>Choose</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+<!-- ------------------------------------------------------------------------ -->
+<div class="form-group" id="formQuestion10">
+    <h1>Question 10</h1>
+    <label for="dropdown10"><h4>You feel more energetic after spending time with a group of people.</h4></label>
+    <select class="form-control">
+      <div class="rating">
+      <option value="" selected disabled>Choose</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+<!-- ------------------------------------------------------------------------ -->
+        <button class="btn btn-primary" id="submitButton" type="submit">
+        Submit
+      </button>
+    </form>
+<!-- ------------------------------------------------------------------------ -->
+
+    <div class="linkContainer">
+      <hr>
+        <nav class="navbar navbar-light bg-white">
+          <form class="form-inline">
+            <button class="btn btn-link" type="button">API Friends List</button>
+            |<a
+              href="https://github.com/IamMonkie/friend-finder"
+              target="_blank"
+              ><button class="btn btn- btn-link" type="button">
+                GitHub Repo
+              </button></a
+            >
+          </form>
+        </nav>
+      </div>
+  </div>
   </body>
 </html>
+
+<script>
+
+$(document).ready(function() {
+$("#submitButton").on("click", function(event) {
+  event.preventDefault();
+  //submit form
+  console.log("Submit Clicked");
+/*
+  let name = $("#name");
+  
+  let answers = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10];
+
+  let question1 = $("#question1.value");
+*/
+
+ //form validation
+ function validateForm() {
+            var isValid = true;
+            $('.validate').each(function() {
+                if ($(this).val() === ''){
+                    isValid = false;
+                }
+            });
+            $('.browser-default').each(function() {
+                if ($(this).val() === ""){
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+        //if everything is filled
+        if (validateForm() == true) {
+            //creates a new friend from the values submitted
+            var newFriend = {
+                name: $('#name').val().trim(),
+                profilePic: $('#photo').val().trim(),
+                scores: [
+                    $('#question1').val(),
+                    $('#question2').val(),
+                    $('#question3').val(),
+                    $('#question4').val(),
+                    $('#question5').val(),
+                    $('#question6').val(),
+                    $('#question7').val(),
+                    $('#question8').val(),
+                    $('#question9').val(),
+                    $('#question10').val(),
+                ]
+            };
+            //Grabs current URL of website
+            var currentURL = window.location.origin;
+            //AJAX posts the data to friends API.
+            $.post(currentURL + "/api/friends", newFriend, function(data) {
+                //Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#matchName").text(data.name);
+                $("#matchPic").attr("src", data.profilePic);
+            });
+            // Show the modal with the best match
+                $('.modal').modal();
+            //clear form after submission
+            $('#name').val("");
+            $('#photo').val("");
+            $('#question1').val("");
+            $('#question2').val("");
+            $('#question3').val("");
+            $('#question4').val("");
+            $('#question5').val("");
+            $('#question6').val("");
+            $('#question7').val("");
+            $('#question8').val("");
+            $('#question9').val("");
+            $('#question10').val("");
+        } else {
+            alert("Please fill out ALL fields before submitting survey!")
+        }
+        // return false;
+    });
+});
+</script>

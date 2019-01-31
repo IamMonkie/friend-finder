@@ -1,0 +1,19 @@
+.jumbotron-fluid {
+  border-radius: 0.5em;
+}
+
+.btn-primary {
+  text-align: center;
+  font-size: 2em;
+  border-radius: 0.25em;
+  background-color: #337ab7;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+.linkContainer {
+}

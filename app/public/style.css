@@ -1,0 +1,19 @@
+form {
+  /* padding: 10em; */
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.btn-primary {
+  width: 100%;
+  border-radius: 0.25em;
+  background-color: #337ab7;
+  font-size: 2em;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}

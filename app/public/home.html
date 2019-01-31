@@ -5,49 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
-
-    <!-- Optional theme -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./home.css" />
 
     <title>Home</title>
   </head>
   <body>
     <!-- ------------------------------------------------------------------------ -->
     <!-- jumbotron -->
-    <div class="jumbotron jumbotron-fluid" align="center">
-      <div class="container">
-        <h1 class="display-4">WELCOME TO FRIEND FINDER</h1>
-        <p class="lead">Complete the survey to find your friends.</p>
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid" align="center">
+        <div class="container">
+          <h1 class="display-4" id="jumbotronContent1">
+            WELCOME TO FRIEND FINDER
+          </h1>
+          <hr />
+          <p class="lead" id="jumbotronContent2">
+            Answer a few basic question. <br />
+            Then find the friend with the greatest compatibility!
+          </p>
+          <!-- Survey botton -->
+          <a href="/survey"
+            ><button
+              type="button"
+              class="btn btn-primary col=sm-4 text-center"
+              align="center"
+            >
+              Start Survey
+            </button></a
+          >
+        </div>
+      </div>
+      <div class="linkContainer">
+        <nav class="navbar navbar-light bg-white">
+          <form class="form-inline">
+            <a href="/api/friends"
+              ><button class="btn btn-link" type="button">
+                API Friends List
+              </button></a
+            >
+
+            |<a
+              href="https://github.com/IamMonkie/friend-finder"
+              target="_blank"
+              ><button class="btn btn- btn-link" type="button">
+                GitHub Repo
+              </button></a
+            >
+          </form>
+        </nav>
       </div>
     </div>
+
     <!-- ------------------------------------------------------------------------ -->
-    <a href="/app/public/survey.html"
-      ><button
-        type="button"
-        class="btn btn-primary col=sm-4 text-center"
-        align="center"
-      >
-        Start Survey
-      </button></a
-    >
   </body>
 </html>
