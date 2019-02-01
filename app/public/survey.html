@@ -16,6 +16,10 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    <!-- chosen -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
 
@@ -39,35 +43,35 @@
     <!-- ------------------------------------------------------------------------ -->
     <!-- form -->
     <form>
-      <div class = "form-group" id="name">
+      <div class = "form-group" >
         <label for="exampleFormControlInput1"><h4>Name</h4></label>
-        <input type="text" class="form-control" id="form-name" placeholder="" />
+        <input type="text" class="form-control" class="chosen-select" id="name" placeholder="" />
       </div>
       <!-- ------------------------------------------------------------------------ -->
-      <div class = "form-group" id="photo">
+      <div class = "form-group">
           <label for="exampleFormControlInput1"><h4>Link to photo (required)</h4></label>
-          <input type="link" class="form-control" id="form-name" placeholder="" />
+          <input type="link" class="form-control" class="chosen-select" id="photo" placeholder="" />
         </div>
         <!-- ------------------------------------------------------------------------ -->
   
-      <div class="form-group" id="formQuestion1">
-        <h1>Question 1</h1>
-        <label for="dropdown1"><h4>Your mind is always buzzing with unexplored ideas and plans.</h4></label>
-        <select class="form-control">
-          <div class="rating">
-          <option value="" selected disabled>Choose</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-          </div>
+        <div class="form-group" id="formQuestion1">
+            <h1>Question 1</h1>
+            <label for="dropdown1"><h4>Your mind is always buzzing with unexplored ideas and plans.</h4></label>
+            <select class="form-control" class="form-control">
+              <div class="rating">
+              <option value="" selected disabled>Choose</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
         <!-- ---------------------------------------------- -->
-        <div class="form-group" id="formQuestion2">
+        <div class="form-group" >
             <h1>Question 2</h1>
             <label for="dropdown2"><h4>Generally speaking, you rely more on your experience than your imagination.</h4></label>
-            <select class="form-control">
+            <select class="form-control" class="chosen-select" id="formQuestion2">
               <div class="rating">
               <option value="" selected disabled>Choose</option>
                   <option value="1">1 (Strongly Disagree)</option>
@@ -78,10 +82,10 @@
                 </select>
               </div>
         <!-- ---------------------------------------------- -->
-        <div class="form-group" id="formQuestion3">
+        <div class="form-group" >
             <h1>Question 3</h1>
             <label for="dropdown3"><h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4></label>
-            <select class="form-control">
+            <select class="form-control" class="chosen-select" id="formQuestion3">
               <div class="rating">
               <option value="" selected disabled>Choose</option>
                   <option value="1">1 (Strongly Disagree)</option>
@@ -92,10 +96,10 @@
                 </select>
               </div>
         <!-- ---------------------------------------------- -->
-        <div class="form-group" id="formQuestion4">
+        <div class="form-group" >
             <h1>Question 4</h1>
             <label for="dropdown4"><h4>You rarely do something just out of sheer curiosity.</h4></label>
-            <select class="form-control">
+            <select class="form-control" class="chosen-select" id="formQuestion4">
               <div class="rating">
               <option value="" selected disabled>Choose</option>
                   <option value="1">1 (Strongly Disagree)</option>
@@ -106,10 +110,10 @@
                 </select>
               </div>
     <!-- ------------------------------------------------------------------------ -->
-    <div class="form-group" id="formQuestion5">
+    <div class="form-group" >
         <h1>Question 5</h1>
         <label for="dropdown5"><h4>People can rarely upset you.</h4></label>
-        <select class="form-control">
+        <select class="form-control" class="chosen-select" id="formQuestion5">
           <div class="rating">
           <option value="" selected disabled>Choose</option>
               <option value="1">1 (Strongly Disagree)</option>
@@ -120,10 +124,10 @@
             </select>
           </div>
 <!-- ------------------------------------------------------------------------ -->
-<div class="form-group" id="formQuestion6">
+<div class="form-group" >
     <h1>Question 6</h1>
     <label for="dropdown6"><h4>It is often difficult for you to relate to other people’s feelings.</h4></label>
-    <select class="form-control">
+    <select class="form-control" class="chosen-select" id="formQuestion6">
       <div class="rating">
       <option value="" selected disabled>Choose</option>
           <option value="1">1 (Strongly Disagree)</option>
@@ -134,10 +138,10 @@
         </select>
       </div>
 <!-- ------------------------------------------------------------------------ -->
-<div class="form-group" id="formQuestion7">
+<div class="form-group" >
     <h1>Question 7</h1>
     <label for="dropdown7"><h4>In a discussion, truth should be more important than people’s sensitivities.</h4></label>
-    <select class="form-control">
+    <select class="form-control" class="chosen-select" id="formQuestion7">
       <div class="rating">
       <option value="" selected disabled>Choose</option>
           <option value="1">1 (Strongly Disagree)</option>
@@ -148,10 +152,10 @@
         </select>
       </div>
 <!-- ------------------------------------------------------------------------ -->
-<div class="form-group" id="formQuestion8">
+<div class="form-group" >
     <h1>Question 8</h1>
     <label for="dropdown8"><h4>You rarely get carried away by fantasies and ideas.</h4></label>
-    <select class="form-control">
+    <select class="form-control" class="chosen-select" id="formQuestion8">
       <div class="rating">
       <option value="" selected disabled>Choose</option>
           <option value="1">1 (Strongly Disagree)</option>
@@ -162,10 +166,10 @@
         </select>
       </div>
 <!-- ------------------------------------------------------------------------ -->
-<div class="form-group" id="formQuestion9">
+<div class="form-group" >
     <h1>Question 9</h1>
     <label for="dropdown9"><h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4></label>
-    <select class="form-control">
+    <select class="form-control" class="chosen-select" id="formQuestion9">
       <div class="rating">
       <option value="" selected disabled>Choose</option>
           <option value="1">1 (Strongly Disagree)</option>
@@ -176,10 +180,10 @@
         </select>
       </div>
 <!-- ------------------------------------------------------------------------ -->
-<div class="form-group" id="formQuestion10">
+<div class="form-group" >
     <h1>Question 10</h1>
     <label for="dropdown10"><h4>You feel more energetic after spending time with a group of people.</h4></label>
-    <select class="form-control">
+    <select class="form-control" class="chosen-select" id="formQuestion10">
       <div class="rating">
       <option value="" selected disabled>Choose</option>
           <option value="1">1 (Strongly Disagree)</option>
@@ -190,55 +194,89 @@
         </select>
       </div>
 <!-- ------------------------------------------------------------------------ -->
-        <button class="btn btn-primary" id="submitButton" type="submit">
+        <button class="btn btn-primary" id="submitButton" type="submit"><i class="fa-check-circle" aria-hidden="true"></i>
         Submit
       </button>
     </form>
 <!-- ------------------------------------------------------------------------ -->
 
-    <div class="linkContainer">
-      <hr>
-        <nav class="navbar navbar-light bg-white">
-          <form class="form-inline">
-            <button class="btn btn-link" type="button">API Friends List</button>
-            |<a
-              href="https://github.com/IamMonkie/friend-finder"
-              target="_blank"
-              ><button class="btn btn- btn-link" type="button">
-                GitHub Repo
-              </button></a
-            >
+<div class="linkContainer">
+    <nav class="navbar navbar-light bg-white">
+      <form class="form-inline">
+        <a href="/api/friends"
+          ><button class="btn btn-link" type="button">
+            API Friends List
+          </button></a
+        >
+        <!-- ------------------------------------------------------------------------ -->
+
+        |<a
+          href="https://github.com/IamMonkie/friend-finder"
+          target="_blank"
+          ><button class="btn btn- btn-link" type="button">
+            GitHub Repo
+          </button></a
+        >
           </form>
         </nav>
       </div>
-  </div>
-  </body>
-</html>
+              <!-- ------------------------------------------------------------------------ -->
 
-<script>
+  </div>
+
+
+<div id="resultsModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h2 class="modal-title"><strong>Best Match</strong></h2>
+    </div>
+    <div class="modal-body">
+      <h2 id="matchName"></h2>
+      <img id="matchImg" src="https://pbs.twimg.com/profile_images/639214960049000449/lNCRC-ub.jpg" alt="">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+let config = {
+  ".chosen-select": {},
+  ".chosen-select-deselect": { allow_single_deselect: true },
+  ".chosen-select-no-single":{ disable_search_threshold: 10 },
+  ".chosen-select-no-results": {no_results_text: "Oh Noes! Nothing Found"},
+  ".chosen-select-width": {width: "95%" }
+};
+
+for(let selector in config) {
+  $(selector).chosen(config[selector]);
+}
 
 $(document).ready(function() {
 $("#submitButton").on("click", function(event) {
-  event.preventDefault();
+  // event.preventDefault();
   //submit form
-  console.log("Submit Clicked");
-/*
-  let name = $("#name");
-  
-  let answers = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10];
+  // alert("Submit Clicked");
 
-  let question1 = $("#question1.value");
-*/
+  // let name = $("#name");
+  
+  // let answers = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10];
+
+  // let question1 = $("#question1.value");
+
 
  //form validation
  function validateForm() {
             var isValid = true;
-            $('.validate').each(function() {
-                if ($(this).val() === ''){
+            $('.form-control').each(function() {
+                if ($(this).val() === ""){
                     isValid = false;
                 }
             });
-            $('.browser-default').each(function() {
+            $('.chosen-select').each(function() {
                 if ($(this).val() === ""){
                     isValid = false;
                 }
@@ -246,51 +284,65 @@ $("#submitButton").on("click", function(event) {
             return isValid;
         }
         //if everything is filled
-        if (validateForm() == true) {
+        if (validateForm()) {
             //creates a new friend from the values submitted
-            var newFriend = {
-                name: $('#name').val().trim(),
-                profilePic: $('#photo').val().trim(),
+            var userData = {
+                name: $('#name').val(),
+                photo: $('#photo').val(),
                 scores: [
-                    $('#question1').val(),
-                    $('#question2').val(),
-                    $('#question3').val(),
-                    $('#question4').val(),
-                    $('#question5').val(),
-                    $('#question6').val(),
-                    $('#question7').val(),
-                    $('#question8').val(),
-                    $('#question9').val(),
-                    $('#question10').val(),
+                    $('#formQuestion1').val(),
+                    $('#formQuestion2').val(),
+                    $('#formQuestion3').val(),
+                    $('#formQuestion4').val(),
+                    $('#formQuestion5').val(),
+                    $('#formQuestion6').val(),
+                    $('#formQuestion7').val(),
+                    $('#formQuestion8').val(),
+                    $('#formQuestion9').val(),
+                    $('#formQuestion10').val(),
                 ]
             };
             //Grabs current URL of website
             var currentURL = window.location.origin;
             //AJAX posts the data to friends API.
-            $.post(currentURL + "/api/friends", newFriend, function(data) {
+            $.post(currentURL + "/api/friends", userData, function(data) {
+
+            
                 //Grab the result from the AJAX post so that the best match's name and photo are displayed.
                 $("#matchName").text(data.name);
-                $("#matchPic").attr("src", data.profilePic);
+                $("#matchImg").attr("src", data.photo);
             });
             // Show the modal with the best match
-                $('.modal').modal();
+                $('#resultsModal').modal("toggle");
+                
             //clear form after submission
             $('#name').val("");
             $('#photo').val("");
-            $('#question1').val("");
-            $('#question2').val("");
-            $('#question3').val("");
-            $('#question4').val("");
-            $('#question5').val("");
-            $('#question6').val("");
-            $('#question7').val("");
-            $('#question8').val("");
-            $('#question9').val("");
-            $('#question10').val("");
+            $('#formQuestion1').val("");
+            $('#formQuestion2').val("");
+            $('#formQuestion3').val("");
+            $('#formQuestion4').val("");
+            $('#formQuestion5').val("");
+            $('#formQuestion6').val("");
+            $('#formQuestion7').val("");
+            $('#formQuestion8').val("");
+            $('#formQuestion9').val("");
+            $('#formQuestion10').val("");
+            
         } else {
             alert("Please fill out ALL fields before submitting survey!")
         }
-        // return false;
+        return false;
     });
-});
+  })
+
 </script>
+
+
+</body>
+</html>
+
+
+
+
+

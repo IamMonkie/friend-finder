@@ -11,37 +11,41 @@ module.exports = function(app) {
 
   app.post("/api/friends", function(req, res) {
     //grabs the new friend's scores to compare with friends in friends array
-    let newFriendScores = req.body.scores;
-    let scoresArray = [];
-    let friendCount = 0;
-    let bestMatch = 0;
+    // let newFriendScores = req.body.scores;
+    // let scoresArray = [];
+    // let friendCount = 0;
 
+    let bestMatch = {
+      name: "",
+      photo: "",
+      friendDifference: 1000
+    };
+    console.log(req.body);
+
+    let userData = req.body;
+    let userScores = userData.scores;
+    let totalDifference = 0;
     //runs through all current friends in list
     for (let i = 0; i < friends.length; i++) {
-      let scoresDiff = 0;
+      console.log(friends[i].name);
+
       //run through scores to compare friends
-      for (let j = 0; j < newFriendScores.length; j++) {
-        scoresDiff += Math.abs(
-          parseInt(friends[i].scores[j]) - parseInt(newFriendScores[j])
+      for (let j = 0; j < friends[i].scores[j]; j++) {
+        totalDifference += Math.abs(
+          parseInt(userScores[j]) - parseInt(friends[i].scores[j])
         );
       }
 
-      //push results into scoresArray
-      scoresArray.push(scoresDiff);
-    }
-
-    //after all friends are compared, find best match
-    for (let i = 0; i < scoresArray.length; i++) {
-      if (scoresArray[i] <= scoresArray[bestMatch]) {
-        bestMatch = i;
+      if (totalDifference <= bestMatch.friendDifference) {
+        bestMatch.name = friend[i].name;
+        bestMatch.photo = friends[i].photo;
+        bestMatch.friendDifference - totalDifference;
       }
+
+      //push results into scoresArray
+      friends.push(userData);
     }
 
-    //return bestMatch data
-    let bff = friends[bestMatch];
-    res.json(bff);
-
-    //pushes new submission into the friends array
-    friends.push(req.body);
+    res.json.push(bestMatch);
   });
 };
